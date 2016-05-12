@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>sin(A + B)</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- JQuery -->
+		<script src="js/jquery.min.js"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h4 id="introduction"></h4>
+					<p id="subint" style="visibility: hidden">An interactive presentation</p>
+					<script type="text/javascript">
+					var d_input = document.getElementById('introduction');
+					var type_this = "Proving sin(A + B) = sin(A)cos(B) + cos(A)sin(B)";
+					var index = 0;
+
+					window.next_letter = function() {
+						if (index <= type_this.length) {
+							d_input.innerHTML = type_this.substr(0, index++);
+							setTimeout("next_letter()", 50);
+						} else {
+							document.getElementById('subint').style.visibility = "visible";
+							$("#subint").hide().fadeIn( "slow", function() {
+								// Animation complete
+							});
+						}
+					}
+					next_letter();
+				</script>
+				</section>
+
+				<section>
+					<h2>A Little History</h2>
+					<p>
+						Proofs through geometry have been employed by mathematicians for thousands of years.
+						Despite being heavily prone to error if not performed correcty, (i.e. using intuition as a means of validation),
+						they have been used in numerous classic works such as Euclid's "Elements" and Kepler's "Harmonices Mundi."
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>What we were Given</h2>
+						<p><em>First Box</em></p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="253" height="360" data-src="img/square_1.png">
+						</a>
+					</section>
+					<section>
+						<p><em>Second Box</em></p>
+						<br>
+						<a href="#/2">
+							<img width="253" height="360" data-src="img/square_2.png">
+						</a>
+					</section>
+				</section>
+
+				<section data-background="#4d7e65" data-background-transition="zoom">
+					<h2>Quick Review</h2>
+					<table>
+						<tbody>
+							<tr>
+								<td>sin(x)</td>
+								<td>opp/hyp</td>
+							</tr>
+							<tr>
+								<td>sin(b)</td>
+								<td>sin(b)/1</td>
+							</tr>
+							<tr>
+								<td>cos(x)</td>
+								<td>adj/hyp</td>
+							</tr>
+							<tr>
+								<td>cos(b)</td>
+								<td>cos(b)/hyp</td>
+							</tr>
+							<tr>
+								<td>Rectangle area</td>
+								<td>l*w</td>
+							</tr>
+							<tr>
+								<td>Rhombus area</td>
+								<td>b*h</td>
+							</tr>
+							<tr>
+								<td>Squirrels</td>
+								<td>are pretty cool</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Find Length of Missing Sides</h2>
+					<p>We can use the basic trigonometric properties to solve (most) of the side lengths</p>
+					<p class="fragment">(Remembering SohCahToa comes in handy here)</p>
+					<p><span class="fragment">Wait for it...</span> <span class="fragment">Wait for it...</span>
+					<span class="fragment">Wait for it...</span></p>
+				</section>
+
+				<section>
+					<h2>Ta Da!</h2>
+					<p>(Sorry about the fuzzy image)</p>
+					<img width="640" height="480" data-src="img/solved_1.jpg">
+				</section>
+
+				<section id="transitions">
+					<h2>Great! But we're not done yet!</h2>
+					<p>Let's prove the area of the rhombus is sin(A+B)!</p>
+					<img data-src="img/lolsin.png">
+					<p class="fragment">(This is the part where you all explain your proof to the class)</p>
+					<p class="fragment">(What? I was running out of space on this slide...)</p>
+				</section>
+
+				<section id="themes">
+					<h2>Great! Now What?</h2>
+					<p class="fragment">We have no idea <span style="font-size: 12px">(Just kidding)</span></p>
+				</section>
+
+				<section>
+					<section data-background="#dddddd">
+						<h2>ENTER: RECTANGLE #2</h2>
+						<img width="253" height="360" data-src="img/square_2.png">
+						<p>Noticed anything that might correlate it with rectangle #1?</p>
+						<p class="fragment">Allow me to demonstrate visually...</p>
+					</section>
+					<section>
+						<h4>Allow me to shed some "color" on the situation:</h4>
+						<div style="float: left; padding-left: 75px">
+							<img class="fragment" width="253" height="360" data-src="img/square_1c.png">
+							<img class="fragment" width="253" height="360" data-src="img/square_2c.png">
+							<img class="fragment" width="253" height="360" data-src="img/drawing_c.png">
+						</div>
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+					</section>
+				</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h3>Our Rhombus Became 2 Rectangles!</h3>
+					<p class="fragment">Wait, what's that...?</p>
+					<img class="fragment" data-src="img/nam_1.png">
+					<img class="fragment" data-src="img/nam_2.png">
+					<p class="fragment">Wait, we can get the area of the rhombustangles using l1*w1+l2*w2!</p>
+					<p class="fragment">A = sin(A)cos(B) + cos(A)sin(B)</p>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Quick Recap</h2>
+					<li class="fragment">So the area of the rhombus is sin(A + B)</li>
+					<li class="fragment">But according to the last slide the area is also sin(A)cos(B) + cos(A)sin(B)</li>
+					<li class="fragment">Can it be that the two are the same????</li>
+				</section>
+
+				<section>
+					<h2>Indeed it can be</h2>
+					<p class="fragment">(Explain this further...)</p>
+				</section>
+
+				<section>
+					<h1>Questions?</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
